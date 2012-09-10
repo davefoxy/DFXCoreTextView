@@ -28,7 +28,8 @@ The DFXCoreTextFont class is the only way to format text or specific pieces of t
     @property (nonatomic, assign) float fontSize;
     @property (nonatomic, assign) DFXTextAlignment textAlignment;
     @property (nonatomic, strong) UIColor *textColor;
-    @property (nonatomic, strong) UIColor *borderColor;
+    @property (nonatomic, strong) UIColor *strokeColor;
+    @property (nonatomic, strong) NSNumber *strokeWidth;
     @property (nonatomic, assign) CGFloat lineSpacing;
     @property (nonatomic, assign) BOOL underlined;
 

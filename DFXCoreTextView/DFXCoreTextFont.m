@@ -31,7 +31,12 @@
     // font color
     CGColorRef color = self.textColor.CGColor ?  self.textColor.CGColor : [UIColor blackColor].CGColor;
     [atts setObject:(__bridge id)color forKey:(NSString*)kCTForegroundColorAttributeName];
-
+    
+    // font stroke color
+    if (self.strokeColor != nil && self.strokeWidth != nil) {
+        [atts setObject:(__bridge id)self.strokeColor.CGColor forKey:(NSString*)kCTStrokeColorAttributeName];
+        [atts setObject:(id)self.strokeWidth forKey:(NSString*)kCTStrokeWidthAttributeName];
+    }
     
     // line height and alignment
     if (!self.lineSpacing) self.lineSpacing = self.fontSize * 1.208; // 1.208 is the photoshop equivilent of 'auto'
