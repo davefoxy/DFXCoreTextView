@@ -39,5 +39,8 @@ When you've created your DFXCoreTextFont instance, assign it to your text by usi
     - (void)setFont:(DFXCoreTextFont*)font forRange:(NSRange)range;
     - (void)setFont:(DFXCoreTextFont*)font forOccurancesOfString:(NSString*)string comparisonMode:(DFXCTComparisonMode)comparisonMode;
 
+### Updating The View
+Drawing and layout happens in drawRect: so if you're finding text not updating properly, remember to call setNeedsDisplay on your view.
+
 ### Project Requirements
 DFXCoreTextView uses ARC and some elements of 'Modern Objective-C' such as auto-synthesize which requires Xcode 4.4
