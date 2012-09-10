@@ -3,9 +3,7 @@ DFXCoreTextView
 
 A CoreText wrapper for the formatting and display of scrollable text in columns. The helper class DFXCoreTextFont is used as a replacement for UIFont, providing many formatting options only available in CoreText.
 
-![DFXCoreTextView Screenshot](https://github.com/davefoxy/DFXCoreTextView/master/screenshot.png "DFXCoreTextView Screenshot")
-
-https://github.com/davefoxy/DFXCoreTextView/blob/master/README.md
+![DFXCoreTextView Screenshot](https://github.com/davefoxy/DFXCoreTextView/blob/master/screenshot.png "DFXCoreTextView Screenshot")
 
 ### Installation
 Just drag the "DFXCoreTextView" folder inside the project directory into your own project (tick 'Copy items into destination groups' folder) and add the CoreText framework to your project's build phases.
