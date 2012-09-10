@@ -46,8 +46,6 @@
     // update the font name then apply it to any instances of some apple-related strings
     font.fontName = @"AmericanTypewriter-Bold";
     font.textColor = [UIColor whiteColor];
-    font.strokeColor = [UIColor blueColor];
-    font.strokeWidth = [NSNumber numberWithInt:-3];
     [self.ctView setFont:font forOccurancesOfString:@"apple" comparisonMode:DFXCTComparisonCaseInsensitiveAnyOccurance];
     [self.ctView setFont:font forOccurancesOfString:@"iphone" comparisonMode:DFXCTComparisonCaseInsensitiveAnyOccurance];
     [self.ctView setFont:font forOccurancesOfString:@"ipad" comparisonMode:DFXCTComparisonCaseInsensitiveAnyOccurance];
