@@ -17,14 +17,11 @@ Default options are in place for presentation however, for customisation, you cu
     @property (nonatomic, assign) CGPoint innerPadding;
     @property (nonatomic, assign) float columnSpacing;
 
-When it's all set up, assign text using any or a combination of the following methods:
+When it's all set up, assign text using:
 
     - (void)setText:(NSString*)text;
-    - (void)setFont:(DFXCoreTextFont*)font;
-    - (void)setFont:(DFXCoreTextFont*)font forRange:(NSRange)range;
-    - (void)setFont:(DFXCoreTextFont*)font forOccurancesOfString:(NSString*)string comparisonMode:(DFXCTComparisonMode)comparisonMode;
 
-### Using DFXCoreTextFont
+### Formatting Using DFXCoreTextFont
 The DFXCoreTextFont class is the only way to format text or specific pieces of text in a DFXCoreTextView. It's essentially what you use instead of UIFont and it offers a few more attributes that only be achieved by using CoreText. Currently, the following properties are available:
 
     @property (nonatomic, copy) NSString *fontName;
@@ -34,6 +31,12 @@ The DFXCoreTextFont class is the only way to format text or specific pieces of t
     @property (nonatomic, strong) UIColor *borderColor;
     @property (nonatomic, assign) CGFloat lineSpacing;
     @property (nonatomic, assign) BOOL underlined;
+
+When you've created your DFXCoreTextFont instance, assign it to your text by using one of the following methods:
+
+    - (void)setFont:(DFXCoreTextFont*)font;
+    - (void)setFont:(DFXCoreTextFont*)font forRange:(NSRange)range;
+    - (void)setFont:(DFXCoreTextFont*)font forOccurancesOfString:(NSString*)string comparisonMode:(DFXCTComparisonMode)comparisonMode;
 
 ### Project Requirements
 DFXCoreTextView uses ARC and some elements of 'Modern Objective-C' such as auto-synthesize which requires Xcode 4.4
