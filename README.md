@@ -32,6 +32,7 @@ The DFXCoreTextFont class is the only way to format text or specific pieces of t
     @property (nonatomic, strong) NSNumber *strokeWidth;
     @property (nonatomic, assign) CGFloat lineSpacing;
     @property (nonatomic, assign) BOOL underlined;
+    @property (nonatomic, assign) float kerning;
 
 When you've created your DFXCoreTextFont instance, assign it to your text by using one of the following methods:
 
