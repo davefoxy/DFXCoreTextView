@@ -26,6 +26,7 @@ typedef enum {
 @property (nonatomic, strong) NSNumber *strokeWidth;
 @property (nonatomic, assign) CGFloat lineSpacing;
 @property (nonatomic, assign) BOOL underlined;
+@property (nonatomic, assign) float kerning;
 
 @property (nonatomic, readonly) NSDictionary *ctStringAttributes;
 

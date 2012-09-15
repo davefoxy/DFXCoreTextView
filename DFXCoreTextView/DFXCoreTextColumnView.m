@@ -12,8 +12,6 @@
 
 -(void)drawRect:(CGRect)rect {
     
-    [self setBackgroundColor:[UIColor clearColor]];
-
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     CGContextTranslateCTM(context, 0, self.bounds.size.height);

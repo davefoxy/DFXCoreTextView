@@ -50,6 +50,15 @@
     CTParagraphStyleRef paragraphStyle = CTParagraphStyleCreate(paragraphStyleSettings, 3);
     [atts setObject:(__bridge id)paragraphStyle forKey:(NSString*)kCTParagraphStyleAttributeName];
     
+    // kerning
+    float kerningVal = self.kerning ? self.kerning : 0.0f;
+    CFNumberRef kerning = CFNumberCreate(NULL, kCFNumberFloatType, &kerningVal);
+    [atts setObject:(__bridge id)kerning forKey:(NSString*)kCTKernAttributeName];
+    
+    CFRelease(fontRef);
+    CFRelease(paragraphStyle);
+    CFRelease(kerning);
+    
     _ctStringAttributes = [NSDictionary dictionaryWithDictionary:atts];
     
     return _ctStringAttributes;
